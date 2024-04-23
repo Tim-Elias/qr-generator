@@ -1,7 +1,7 @@
 import { Controller, Get, Query } from '@nestjs/common';
 import { AppService } from './app.service';
 
-@Controller()
+@Controller('qr')
 export class AppController {
   constructor(private readonly appService: AppService) {}
 
