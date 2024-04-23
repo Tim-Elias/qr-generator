@@ -1,8 +1,9 @@
 import { Injectable } from '@nestjs/common';
+import * as QRCode from 'qrcode';
 
 @Injectable()
 export class AppService {
-  getHello(): string {
-    return 'Hello World!';
+  getQR(data: string): string {
+    return QRCode.toDataURL(data);
   }
 }
